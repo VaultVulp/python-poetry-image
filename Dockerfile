@@ -1,7 +1,8 @@
 FROM python:3.8.2-slim-buster
 
-COPY update-sys-packages.sh. .
-RUN update-sys-packages.sh
+COPY update-sys-packages.sh .
+
+RUN ./update-sys-packages.sh
 
 RUN pip install -U pip
 
